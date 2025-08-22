@@ -1,7 +1,7 @@
 package com.email.dispatcher.exceptions;
 
-public class EmailNotFoundException extends RuntimeException{
-    EmailNotFoundException(String message) {
+public class TemplateNotFoundException extends RuntimeException{
+    TemplateNotFoundException(String message) {
         super(message);
     }
 }

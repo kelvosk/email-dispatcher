@@ -1,19 +1,22 @@
 package com.email.dispatcher.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class EmailDTO {
-    private String id;
+    @NotBlank
+    @Email
     private String from;
+    @NotBlank
+    @Email
     private String to;
     private List<String> cc;
     private List<String> bcc;

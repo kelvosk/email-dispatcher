@@ -1,4 +1,4 @@
-package com.email.dispatcher.services.imp;
+package com.email.dispatcher.services.impl;
 
 import com.email.dispatcher.dtos.EmailDTO;
 import com.email.dispatcher.exceptions.EmailException;
