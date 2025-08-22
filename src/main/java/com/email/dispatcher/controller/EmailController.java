@@ -3,7 +3,6 @@ package com.email.dispatcher.controller;
 import com.email.dispatcher.dtos.EmailDTO;
 import com.email.dispatcher.services.EmailService;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
