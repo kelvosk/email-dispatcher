@@ -2,6 +2,7 @@ package com.email.dispatcher.controller;
 
 import com.email.dispatcher.dtos.EmailDTO;
 import com.email.dispatcher.services.EmailService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -24,7 +25,7 @@ public class EmailController {
     }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<EmailDTO> send(@RequestPart("body") EmailDTO email,
+    public ResponseEntity<EmailDTO> send(@RequestPart("body") @Valid EmailDTO email,
                                          @RequestPart(name = "files", required = false) List<MultipartFile> files) {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.emailService.send(email, files));
     }

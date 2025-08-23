@@ -12,3 +12,4 @@ email-dispatcher:
   config:
     kafka:
       topic-name: local-topic
+      email-key: email
